@@ -1,4 +1,4 @@
-# About DeepDTA
+# About DeepDTA: deep drug-target binding affinity prediction
 
 will be updated
 
