@@ -30,13 +30,6 @@ def argparser():
       default=0,
       help='Number of neurons in hidden layer.'
   )
-
-  parser.add_argument(
-      '--keep_prob',
-      type=float,
-      default=0.7,
-      help='Rate to be kept for dropout.'
-  )
   parser.add_argument(
       '--num_classes',
       type=int,
