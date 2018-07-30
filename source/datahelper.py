@@ -133,13 +133,14 @@ class DataSet(object):
     
     return test_fold, train_folds
 
-  def parse_data(self, fpath,  with_label=True): ### I NEED 5 DIFF PATHS
+  def parse_data(self, fpath,  with_label=True): 
+		
     print("Read %s start" % fpath)
 
     ligands = json.load(open(fpath+"ligands_can.txt"), object_pairs_hook=OrderedDict)
     proteins = json.load(open(fpath+"proteins.txt"), object_pairs_hook=OrderedDict)
 
-    Y = pickle.load(open(fpath + "Y","rb"), encoding='latin1') ### Bunun raw halini getirip okumak lazım
+    Y = pickle.load(open(fpath + "Y","rb"), encoding='latin1') ### TODO: read from raw
 
     XD = []
     XT = []
