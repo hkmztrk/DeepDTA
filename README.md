@@ -10,11 +10,11 @@ will be updated
 
 You'll need to install following in order to run the codes.
 
-Python 3.x
-Keras 2.x
-Tensorflow 1.x
-numpy
-matplotlib
+*  Python 3.x
+*  Keras 2.x
+*  Tensorflow 1.x
+*  numpy
+*  matplotlib
 
 You have to place "data" folder under "source" directory. 
 
