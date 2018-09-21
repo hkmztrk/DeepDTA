@@ -2,8 +2,7 @@
 
 The approach used in this work is the modeling of protein sequences and compound 1D representations with convolutional neural networks (CNNs).
 
-![Figure](https://github.com/hkmztrk/DeepDTA/blob/master/docs/figures/deepdta.PNG|width=100)
-
+![Figure](https://github.com/hkmztrk/DeepDTA/blob/master/docs/figures/deepdta.PNG){:height="50%" width="50%"}
 # Installation
 
 ## Data
