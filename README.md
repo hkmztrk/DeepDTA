@@ -1,6 +1,8 @@
 # About DeepDTA: deep drug-target binding affinity prediction
 
-will be updated
+The approach used in this work is the modeling of protein sequences and compound 1D representations with convolutional neural networks (CNNs).
+
+![Figure](https://github.com/hkmztrk/DeepDTA/blob/master/docs/figures/deepdta.PNG)
 
 # Installation
 
