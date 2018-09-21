@@ -40,3 +40,15 @@ python run_experiments.py --num_windows 32 \
 
 
 **For citation:**
+
+
+@article{ozturk2018deepdta,
+  title={DeepDTA: deep drug--target binding affinity prediction},
+  author={{\"O}zt{\"u}rk, Hakime and {\"O}zg{\"u}r, Arzucan and Ozkirimli, Elif},
+  journal={Bioinformatics},
+  volume={34},
+  number={17},
+  pages={i821--i829},
+  year={2018},
+  publisher={Oxford University Press}
+}
