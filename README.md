@@ -10,9 +10,9 @@ will be updated
 
 You'll need to install following in order to run the codes.
 
-*  Python 3.x
-*  Keras 2.x
-*  Tensorflow 1.x
+*  [Python 3.x](https://www.python.org/downloads/)
+*  [Keras 2.x](https://pypi.org/project/Keras/)
+*  [Tensorflow 1.x](https://www.tensorflow.org/install/)
 *  numpy
 *  matplotlib
 
