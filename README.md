@@ -11,7 +11,7 @@ The approach used in this work is the modeling of protein sequences and compound
 
 You'll need to install following in order to run the codes.
 
-*  [Python 3.x](https://www.python.org/downloads/)
+*  [Python 3.4 <=](https://www.python.org/downloads/)
 *  [Keras 2.x](https://pypi.org/project/Keras/)
 *  [Tensorflow 1.x](https://www.tensorflow.org/install/)
 *  numpy
