@@ -25,6 +25,8 @@ These files were used to re-produce the results of two other methods [(Pahikkala
 
 
 ### Train and test folds
-
+There are two files for each dataset: train fold and test fold. Both of these files keep the position information for the binding affinity value given in binding affinity matrices in the text files. 
+*  Since we performed 5-fold cv, each fold file contains five different set of positions.
+*  Test set is same for all five training sets.
 
 
