@@ -15,5 +15,7 @@ These files were used to re-produce the results of two other methods [(Pahikkala
 
 ### Binding affinity files
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=pK_{d}=-log_{10}\frac{K_d}{1e9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?pK_{d}=-log_{10}\frac{K_d}{1e9}" title="pK_{d}=-log_{10}\frac{K_d}{1e9}" /></a>
+
 
 
