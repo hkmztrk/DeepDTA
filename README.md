@@ -7,6 +7,8 @@ The approach used in this work is the modeling of protein sequences and compound
 
 ## Data
 
+Please see the [readme](https://github.com/hkmztrk/DeepDTA/blob/master/data/README.md) for detailed explanation.
+
 ## Requirements
 
 You'll need to install following in order to run the codes.
