@@ -15,7 +15,16 @@ These files were used to re-produce the results of two other methods [(Pahikkala
 
 ### Binding affinity files
 
+*  For davis dataset, standard value is Kd in nM. In the article, we used the transformation below:
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=pK_{d}=-log_{10}\frac{K_d}{1e9}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?pK_{d}=-log_{10}\frac{K_d}{1e9}" title="pK_{d}=-log_{10}\frac{K_d}{1e9}" /></a>
+
+* For KIBA dataset, standard value is KIBA score. Two versions of the binding affinity value txt files correspond the original values and transformed values ([more information here](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0209-z)). In the article we used the tranformed form. 
+
+* nan values indicate there is no experimental value for that drug-target pair.
+
+
+### Train and test folds
 
 
 
