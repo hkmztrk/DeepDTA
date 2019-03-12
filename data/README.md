@@ -29,4 +29,16 @@ There are two files for each dataset: train fold and test fold. Both of these fi
 *  Since we performed 5-fold cv, each fold file contains five different set of positions.
 *  Test set is same for all five training sets.
 
+### For using the folds
+
+```python
+import pickle
+import numpy as np
+
+Y = pickle.load(open("Y", "rb"))
+label_row_inds, label_col_inds = np.where(np.isnan(Y)==False)
+```
+
+
+
 
