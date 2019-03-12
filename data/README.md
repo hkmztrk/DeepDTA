@@ -47,6 +47,7 @@ label_row_inds, label_col_inds = np.where(np.isnan(Y)==False)
     ```
 
 *  label_col_inds: protein indices for the corresponding affinity matrix positions (flattened)
+
     e.g.  36275th point in the KIBA Y matrix indicates the 120th protein (same order in the protein sequence file) 
     ```python
     label_col_inds[36275]
