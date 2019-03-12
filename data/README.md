@@ -51,3 +51,16 @@ label_row_inds, label_col_inds = np.where(np.isnan(Y)==False)
     ```python
     label_col_inds[36275]
     ```
+    
+*   You can then load the fold files as follows:
+    ```python
+    import json
+    test_fold = json.load(open(yourdir + "folds/test_fold_setting1.txt"))
+    train_folds = json.load(open(yourdir + "folds/train_fold_setting1.txt"))
+    
+    test_drug_indices = label_row_inds[test_fold]
+    test_protein_indices = label_col_inds[test_fold]
+    
+    ```
+    
+    Remember that, ```train_folds``` contain an array of 5 lists, each of which correspond to a training set.
