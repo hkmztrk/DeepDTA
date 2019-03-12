@@ -30,6 +30,7 @@ There are two files for each dataset: train fold and test fold. Both of these fi
 *  Test set is same for all five training sets.
 
 ### For using the folds
+*   Load affinity matrix Y 
 
 ```python
 import pickle
@@ -39,6 +40,14 @@ Y = pickle.load(open("Y", "rb"))
 label_row_inds, label_col_inds = np.where(np.isnan(Y)==False)
 ```
 
+*  label_row_inds: drug indices for the corresponding affinity positions  
+    e.g. for the 36275th point in the Y matrix indicates the 364th drug (same order in the SMILES file) 
+    ```python
+    label_row_inds[36275]
+    ```
 
-
-
+*  label_col_inds: protein indices for the corresponding affinity positions 
+    e.g. for the 36275th point in the Y matrix indicates the 120th protein (same order in the protein sequence file) 
+    ```python
+    label_col_inds[36275]
+    ```
