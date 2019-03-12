@@ -40,13 +40,13 @@ Y = pickle.load(open("Y", "rb"))
 label_row_inds, label_col_inds = np.where(np.isnan(Y)==False)
 ```
 
-*  label_row_inds: drug indices for the corresponding affinity positions  
+*  label_row_inds: drug indices for the corresponding affinity matrix positions (flattened)  
     e.g. for the 36275th point in the Y matrix indicates the 364th drug (same order in the SMILES file) 
     ```python
     label_row_inds[36275]
     ```
 
-*  label_col_inds: protein indices for the corresponding affinity positions 
+*  label_col_inds: protein indices for the corresponding affinity matrix positions (flattened)
     e.g. for the 36275th point in the Y matrix indicates the 120th protein (same order in the protein sequence file) 
     ```python
     label_col_inds[36275]
