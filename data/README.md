@@ -36,7 +36,7 @@ There are two files for each dataset: train fold and test fold. Both of these fi
 import pickle
 import numpy as np
 
-Y = pickle.load(open("Y", "rb")) // Y = pickle.load(open("Y", "rb"), encoding='latin1')
+Y = pickle.load(open("Y", "rb"))  # Y = pickle.load(open("Y", "rb"), encoding='latin1')
 label_row_inds, label_col_inds = np.where(np.isnan(Y)==False)
 ```
 
