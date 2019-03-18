@@ -7,4 +7,5 @@ python run_experiments.py --num_windows 32 \
                           --max_smi_len 100 \
                           --dataset_path 'data/kiba/' \
                           --problem_type 1 \
+                          --is_log 0 \
                           --log_dir 'logs/'
