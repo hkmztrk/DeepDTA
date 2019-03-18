@@ -85,7 +85,12 @@ def argparser():
       default=0.0,
       help='Threshold to split data into binary classes'
   )
-
+  parser.add_argument(
+      '--is_log',
+      type=int,
+      default=0,
+      help='use log transformation for Y'
+  )
   parser.add_argument(
       '--checkpoint_path',
       type=str,
