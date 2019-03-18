@@ -141,6 +141,8 @@ class DataSet(object):
     proteins = json.load(open(fpath+"proteins.txt"), object_pairs_hook=OrderedDict)
 
     Y = pickle.load(open(fpath + "Y","rb"), encoding='latin1') ### TODO: read from raw
+    if FLAGS.is_log:
+        Y = -(np.log10(Y/(math.pow(10,9))))
 
     XD = []
     XT = []
