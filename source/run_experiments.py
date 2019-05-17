@@ -242,7 +242,7 @@ def build_baseline(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
 def nfold_1_2_3_setting_sample(XD, XT,  Y, label_row_inds, label_col_inds, measure, runmethod,  FLAGS, dataset):
 
     bestparamlist = []
-    test_set, outer_train_sets = dataset.read_sets(FLAGS.dataset_path, FLAGS.problem_type) 
+    test_set, outer_train_sets = dataset.read_sets(FLAGS) 
     
     foldinds = len(outer_train_sets)
 
@@ -496,7 +496,7 @@ def experiment(FLAGS, perfmeasure, deepmethod, foldcount=6): #5-fold cross valid
     FLAGS.charseqset_size = dataset.charseqset_size 
     FLAGS.charsmiset_size = dataset.charsmiset_size 
 
-    XD, XT, Y = dataset.parse_data(fpath = FLAGS.dataset_path)
+    XD, XT, Y = dataset.parse_data(FLAGS)
 
     XD = np.asarray(XD)
     XT = np.asarray(XT)
