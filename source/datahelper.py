@@ -135,8 +135,8 @@ class DataSet(object):
     
     return test_fold, train_folds
 
-  def parse_data(self, fpath,  with_label=True): 
-		
+  def parse_data(self, FLAGS,  with_label=True): 
+    fpath = FLAGS.dataset_path	
     print("Read %s start" % fpath)
 
     ligands = json.load(open(fpath+"ligands_can.txt"), object_pairs_hook=OrderedDict)
