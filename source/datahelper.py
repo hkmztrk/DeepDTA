@@ -125,7 +125,9 @@ class DataSet(object):
     self._num_data = len(self._raw)
 
 
-  def read_sets(self, fpath, setting_no): ### fpath should be the dataset folder /kiba/ or /davis/
+  def read_sets(self, FLAGS): ### fpath should be the dataset folder /kiba/ or /davis/
+    fpath = FLAGS.dataset_path
+    setting_no = FLAGS.problem_type
     print("Reading %s start" % fpath)
 
     test_fold = json.load(open(fpath + "folds/test_fold_setting" + str(setting_no)+".txt"))
