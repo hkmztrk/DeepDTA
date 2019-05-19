@@ -119,7 +119,7 @@ class DataSet(object):
     self.PROBLEMSET = setting_no
 
     # read raw file
-    self._raw = self.read_sets( fpath, setting_no )
+    # self._raw = self.read_sets( FLAGS)
 
     # iteration flags
     self._num_data = len(self._raw)
