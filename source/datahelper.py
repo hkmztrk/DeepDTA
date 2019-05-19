@@ -122,7 +122,7 @@ class DataSet(object):
     # self._raw = self.read_sets( FLAGS)
 
     # iteration flags
-    self._num_data = len(self._raw)
+    # self._num_data = len(self._raw)
 
 
   def read_sets(self, FLAGS): ### fpath should be the dataset folder /kiba/ or /davis/
