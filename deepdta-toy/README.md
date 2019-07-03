@@ -7,6 +7,7 @@ Here is the modified version of DeepDTA that enables the use of your own trainin
 These are two sample datasets that I used as an example. DTC is used as training set and mytest folder contains three example files that your test data should be formatted as.
 
 *   **DTC:** is a subset of data collected from (https://drugtargetcommons.fimm.fi/) that only contains pKd binding affinity values.
+    *   [Y](https://cmpe.boun.edu.tr/~hakime.ozturk/source/bindingaff/Y), please make sure to download this file and place it under DTC folder. It stores binding affinity values.
     *   since training data values are pKd, predicted values will be pKd as well. You can also change the training set according to your needs. 
     *    for that uncomment line 552 in 'run_experiments.py' file.
     ```py
