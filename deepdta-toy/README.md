@@ -13,9 +13,9 @@ These are two sample datasets that I used as an example. DTC is used as training
         #prepare_new_data(FLAGS.test_path, test=False) #Uncomment this if you also have a new training data
     ```
 *   **mytest:** 
-    *   Y.tab: tab-seperated binding affinity file (drugs x proteins matrix). This can be 0's if one wants to predict binding affinity values for the unknown data.
-    *    ligands.tab: each line contains tab-seperated ligand ID and corresponding SMILES.
-    *    proteins.fasta: fasta file for each protein in the dataset. 
+    *   ***Y.tab:*** tab-seperated binding affinity file (drugs x proteins matrix). This can be 0's if one wants to predict binding affinity values for the unknown data.
+    *    ***ligands.tab:*** each line contains tab-seperated ligand ID and corresponding SMILES.
+    *    ***proteins.fasta:*** fasta file for each protein in the dataset. 
 
 
 ## Requirements
