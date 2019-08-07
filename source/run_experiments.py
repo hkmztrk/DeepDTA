@@ -30,7 +30,7 @@ import keras
 from keras.models import Model
 from keras.preprocessing import sequence
 from keras.models import Sequential, load_model
-from keras.layers import Dense, Dropout, Activation, Merge
+from keras.layers import Dense, Dropout, Activation
 from keras.layers import Embedding
 from keras.layers import Conv1D, GlobalMaxPooling1D, MaxPooling1D
 from keras.layers.normalization import BatchNormalization
