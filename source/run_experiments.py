@@ -362,8 +362,9 @@ def general_nfold_cv(XD, XT,  Y, label_row_inds, label_col_inds, prfmeasure, run
                     param3value = paramset3[param3ind]
 
                     gridmodel = runmethod(FLAGS, param1value, param2value, param3value)
+                    es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=15)
                     gridres = gridmodel.fit(([np.array(train_drugs),np.array(train_prots) ]), np.array(train_Y), batch_size=batchsz, epochs=epoch, 
-                            validation_data=( ([np.array(val_drugs), np.array(val_prots) ]), np.array(val_Y)),  shuffle=False ) 
+                            validation_data=( ([np.array(val_drugs), np.array(val_prots) ]), np.array(val_Y)),  shuffle=False, callbacks=[es] ) 
 
 
                     predicted_labels = gridmodel.predict([np.array(val_drugs), np.array(val_prots) ])
