@@ -16,7 +16,17 @@ These are two sample datasets that I used as an example. DTC is used as training
 *   **mytest:** 
     *   ***Y.tab:*** tab-seperated binding affinity file (drugs x proteins matrix). 
     
-    The number of rows corresponds to the number of drugs and the number of columns is equal to the number of proteins. This can be all 0s if one wants to predict binding affinity values for the unknown data. Or you can simply use the known affinity values for each drug-protein pair in which unknown interactions are indicated as 'nan'. 
+          The number of rows corresponds to the number of drugs and the number of columns is equal to the number of proteins. This can be all 0s if one wants to predict binding affinity values for the unknown data. Or you can simply use the known affinity values for each drug-protein pair in which unknown interactions are indicated as 'nan'. 
+          ***Example  Y for predicting unknown protein-drug interactions***
+                         0 0 0 0 0 0
+                         0 0 0 0 0 0
+                         0 0 0 0 0 0
+
+          ***Example  Y for predicting known + unknown protein-drug interactions***
+                         8.1 2 12 nan 15 5
+                         4 4.3 5 14 nan nan
+                         nan 2.2 5 8 12 nan
+          
     *    ***ligands.tab:*** each line contains tab-seperated ligand ID and corresponding SMILES.
     *    ***proteins.fasta:*** fasta file for each protein in the dataset. 
 
