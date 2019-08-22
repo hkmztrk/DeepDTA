@@ -250,14 +250,13 @@ def nfold_1_2_3_setting_sample(tr_XD, tr_XT,  tr_Y, te_XD, te_XT, te_Y,  measure
     train_set = outer_train_sets
     #train_set = [item for sublist in outer_train_sets for item in sublist]
 
-    bestparam, best_param_list, bestperf, all_predictions, all_losses = general_nfold_cv(tr_XD, tr_XT,  tr_Y, te_XD, te_XT, te_Y,  
+    bestparamind, best_param_list, bestperf, all_predictions, all_losses = general_nfold_cv(tr_XD, tr_XT,  tr_Y, te_XD, te_XT, te_Y,  
                                                                                                 measure, runmethod, FLAGS, train_set, test_set)
     
     testperf = all_predictions[bestparamind]##pointer pos 
 
     logging("---FINAL RESULTS-----", FLAGS)
-    logging("best param index = %s,  best param = %.5f" % 
-            (bestparamind, bestparam), FLAGS)
+    logging("best param index = %s" % bestparamind, FLAGS)
 
 
     testperfs = []
