@@ -56,7 +56,7 @@ python run_experiments.py --num_windows 32 \
                           --num_epoch 100 \
                           --max_seq_len 1000 \
                           --max_smi_len 100 \
-                          --dataset_path 'data/DTC/' \
+                          --train_path 'data/DTC/' \
                           --test_path 'data/mytest/' \
                           --problem_type 1 \
                           --isLog 0 \
