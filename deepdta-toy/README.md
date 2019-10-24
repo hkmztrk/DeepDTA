@@ -9,9 +9,9 @@ These are two sample datasets that I used as an example. DTC is used as training
 *   **DTC:** is a subset of data collected from (https://drugtargetcommons.fimm.fi/) that only contains pKd binding affinity values.
     *   [Y](https://cmpe.boun.edu.tr/~hakime.ozturk/source/bindingaff/Y), please make sure to download this file and place it under DTC folder. It stores binding affinity values in pickle format.
     *   since training data values are pKd, predicted values will be pKd as well. You can also change the training set according to your needs. 
-    *    for that uncomment line 552 in 'run_experiments.py' file.
+    *    for that uncomment line 551 in 'run_experiments.py' file.
     ```py
-        #prepare_new_data(FLAGS.test_path, test=False) #Uncomment this if you also have a new training data
+        #prepare_new_data(FLAGS.train_path, test=False) #Uncomment this if you also have a new training data
     ```
 *   **mytest:** 
     *   ***Y.tab:*** tab-seperated binding affinity file (drugs x proteins matrix). 

@@ -548,7 +548,7 @@ if __name__=="__main__":
         os.makedirs(FLAGS.log_dir)
 
     prepare_new_data(FLAGS.test_path, test=True)
-    #prepare_new_data(FLAGS.test_path, test=False) #Uncomment this if you also have a new training data
+    #prepare_new_data(FLAGS.train_path, test=False) #Uncomment this if you also have a new training data
 
     logging(str(FLAGS), FLAGS)
     run_regression( FLAGS )

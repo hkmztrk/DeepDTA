@@ -70,7 +70,7 @@ def argparser():
   parser.add_argument(
       '--train_path',
       type=str,
-      default='/data/kiba/',
+      default='/data/DTC/',
       help='Directory for input data.'
   )
   parser.add_argument(
