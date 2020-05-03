@@ -442,6 +442,7 @@ def plotLoss(history, batchind, epochind, param3ind, foldind):
     plt.legend(['traincindex', 'valcindex'], loc='upper left')
     plt.savefig("figures/"+figname + "_acc.png" , dpi=None, facecolor='w', edgecolor='w', orientation='portrait', 
                             papertype=None, format=None,transparent=False, bbox_inches=None, pad_inches=0.1,frameon=None)
+    plt.close()
 
 
 
