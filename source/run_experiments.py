@@ -645,16 +645,8 @@ def cindex_score(y_true, y_pred):
 
 def plotLoss(history, batchind, epochind, param3ind, foldind):
     figname = (
-        "b"
-        + str(batchind)
-        + "_e"
-        + str(epochind)
-        + "_"
-        + str(param3ind)
-        + "_"
-        + str(foldind)
-        + "_"
-        + str(time.time())
+        f"b{batchind}_e{epochind}_{param3ind}_{foldind}_{time.time()}"
+
     )
     plt.figure()
     plt.plot(history.history["loss"])
@@ -665,7 +657,7 @@ def plotLoss(history, batchind, epochind, param3ind, foldind):
     # plt.legend(['trainloss', 'valloss', 'cindex', 'valcindex'], loc='upper left')
     plt.legend(["trainloss", "valloss"], loc="upper left")
     plt.savefig(
-        "figures/" + figname + ".png",
+        Path("figures") / f"{figname}.png",
         dpi=None,
         facecolor="w",
         edgecolor="w",
@@ -688,7 +680,7 @@ def plotLoss(history, batchind, epochind, param3ind, foldind):
     plt.plot(history.history["val_cindex_score"])
     plt.legend(["traincindex", "valcindex"], loc="upper left")
     plt.savefig(
-        "figures/" + figname + "_acc.png",
+        Path("figures") / f"{figname}_acc.png",
         dpi=None,
         facecolor="w",
         edgecolor="w",
@@ -797,7 +789,7 @@ def run_regression(FLAGS):
 
 if __name__ == "__main__":
     FLAGS = argparser()
-    FLAGS.log_dir = FLAGS.log_dir + str(time.time()) + "/"
+    FLAGS.log_dir = Path(FLAGS.log_dir) / str(time.time())
 
     if not os.path.exists(FLAGS.log_dir):
         os.makedirs(FLAGS.log_dir)

@@ -6,6 +6,7 @@ import re
 import sys
 import time
 from collections import OrderedDict
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -266,32 +267,32 @@ class DataSet(object):
     def read_sets(
         self, FLAGS
     ):  ### fpath should be the dataset folder /kiba/ or /davis/
-        fpath = FLAGS.dataset_path
+        fpath: Path = Path(FLAGS.dataset_path)
         setting_no = FLAGS.problem_type
         print("Reading %s start" % fpath)
 
         test_fold = json.load(
-            open(fpath + "folds/test_fold_setting" + str(setting_no) + ".txt")
+            open(fpath / "folds" / f"test_fold_setting{setting_no}.txt")
         )
         train_folds = json.load(
-            open(fpath + "folds/train_fold_setting" + str(setting_no) + ".txt")
+            open(fpath / "folds" / f"train_fold_setting{setting_no}.txt")
         )
 
         return test_fold, train_folds
 
     def parse_data(self, FLAGS, with_label=True):
-        fpath = FLAGS.dataset_path
+        fpath: Path = Path(FLAGS.dataset_path)
         print("Read %s start" % fpath)
 
         ligands = json.load(
-            open(fpath + "ligands_can.txt"), object_pairs_hook=OrderedDict
+            open(fpath / "ligands_can.txt"), object_pairs_hook=OrderedDict
         )
         proteins = json.load(
-            open(fpath + "proteins.txt"), object_pairs_hook=OrderedDict
+            open(fpath / "proteins.txt"), object_pairs_hook=OrderedDict
         )
 
         Y = pickle.load(
-            open(fpath + "Y", "rb"), encoding="latin1"
+            open(fpath / "Y", "rb"), encoding="latin1"
         )  ### TODO: read from raw
         if FLAGS.is_log:
             Y = -(np.log10(Y / (math.pow(10, 9))))
