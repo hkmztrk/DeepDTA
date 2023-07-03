@@ -1,10 +1,14 @@
-import sys, re, math, time
-import numpy as np
-import matplotlib.pyplot as plt
-import json
-import pickle
 import collections
+import json
+import math
+import pickle
+import re
+import sys
+import time
 from collections import OrderedDict
+
+import matplotlib.pyplot as plt
+import numpy as np
 from matplotlib.pyplot import cm
 
 # from keras.preprocessing.sequence import pad_sequences

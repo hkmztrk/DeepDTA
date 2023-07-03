@@ -150,7 +150,6 @@ def build_combined_onehot(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
 
 
 def build_combined_categorical(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
-
     XDinput = Input(
         shape=(FLAGS.max_smi_len,), dtype="int32"
     )  ### Buralar flagdan gelmeliii
@@ -241,7 +240,6 @@ def build_combined_categorical(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH
 
 
 def build_single_drug(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
-
     interactionModel = Sequential()
     XTmodel = Sequential()
     XTmodel.add(Activation("linear", input_shape=(FLAGS.target_count,)))
@@ -305,7 +303,6 @@ def build_single_drug(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
 
 
 def build_single_prot(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
-
     interactionModel = Sequential()
     XDmodel = Sequential()
     XDmodel.add(Activation("linear", input_shape=(FLAGS.drugcount,)))
@@ -399,7 +396,6 @@ def build_baseline(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
 def nfold_1_2_3_setting_sample(
     XD, XT, Y, label_row_inds, label_col_inds, measure, runmethod, FLAGS, dataset
 ):
-
     bestparamlist = []
     test_set, outer_train_sets = dataset.read_sets(FLAGS)
 
@@ -505,7 +501,6 @@ def general_nfold_cv(
     labeled_sets,
     val_sets,
 ):  ## BURAYA DA FLAGS LAZIM????
-
     paramset1 = FLAGS.num_windows  # [32]#[32,  512] #[32, 128]  # filter numbers
     paramset2 = FLAGS.smi_window_lengths  # [4, 8]#[4,  32] #[4,  8] #filter length smi
     paramset3 = FLAGS.seq_window_lengths  # [8, 12]#[64,  256] #[64, 192]#[8, 192, 384]
@@ -619,7 +614,6 @@ def general_nfold_cv(
     for param1ind in range(len(paramset1)):
         for param2ind in range(len(paramset2)):
             for param3ind in range(len(paramset3)):
-
                 avgperf = 0.0
                 for foldind in range(len(val_sets)):
                     foldperf = all_predictions[pointer][foldind]
@@ -637,7 +631,6 @@ def general_nfold_cv(
 
 
 def cindex_score(y_true, y_pred):
-
     g = tf.subtract(tf.expand_dims(y_pred, -1), y_pred)
     g = tf.cast(g == 0.0, tf.float32) * 0.5 + tf.cast(g > 0.0, tf.float32)
 
@@ -651,7 +644,6 @@ def cindex_score(y_true, y_pred):
 
 
 def plotLoss(history, batchind, epochind, param3ind, foldind):
-
     figname = (
         "b"
         + str(batchind)
@@ -735,7 +727,6 @@ def prepare_interaction_pairs(XD, XT, Y, rows, cols):
 def experiment(
     FLAGS, perfmeasure, deepmethod, foldcount=6
 ):  # 5-fold cross validation + test
-
     # Input
     # XD: [drugs, features] sized array (features may also be similarities with other drugs
     # XT: [targets, features] sized array (features may also be similarities with other targets
@@ -798,7 +789,6 @@ def experiment(
 
 
 def run_regression(FLAGS):
-
     perfmeasure = get_cindex
     deepmethod = build_combined_categorical
 
