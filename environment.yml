@@ -1,0 +1,16 @@
+name: deepdta
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - keras=2
+  - tensorflow=1
+  - numpy
+  - matplotlib
+  - scikit-learn
+  - ca-certificates
+  - certifi
+  - openssl
+  - pydot
+prefix: /home/marvin/miniconda3/envs/deepdta

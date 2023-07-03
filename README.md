@@ -11,18 +11,17 @@ Please see the [readme](https://github.com/hkmztrk/DeepDTA/blob/master/data/READ
 
 ## Requirements
 
-You'll need to install following in order to run the codes.
+Install all requirements using the provided environment file
 
-*  [Python 3.4 <=](https://www.python.org/downloads/)
-*  [Keras 2.x](https://pypi.org/project/Keras/)
-*  [Tensorflow 1.x](https://www.tensorflow.org/install/)
-*  numpy
-*  matplotlib
-
-You have to place "data" folder under "source" directory. 
+```bash
+conda env create -f environment.yml
+```
 
 # Usage
-```
+
+You have to place "data" folder under "source" directory.
+
+```bash
 python run_experiments.py --num_windows 32 \
                           --seq_window_lengths 8 12 \
                           --smi_window_lengths 4 8 \
