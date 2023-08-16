@@ -7,17 +7,20 @@ The approach used in this work is the modeling of protein sequences and compound
 
 ## Data
 
-Please see the [readme](https://github.com/hkmztrk/DeepDTA/blob/master/data/README.md) for detailed explanation.
+Please see the [README](https://github.com/hkmztrk/DeepDTA/blob/master/data/README.md) for detailed explanation.
 
 ## Requirements
 
-You'll need to install following in order to run the codes.
+You'll need to install following in order to run the codes. Refer to [deepdta.yml](https://github.com/hkmztrk/DeepDTA/blob/master/deepdta.yml) for a conda environment tested in Linux. 
 
 *  [Python 3.4 <=](https://www.python.org/downloads/)
 *  [Keras 2.x](https://pypi.org/project/Keras/)
 *  [Tensorflow 1.x](https://www.tensorflow.org/install/)
 *  numpy
 *  matplotlib
+*  scikit-learn
+
+
 
 You have to place "data" folder under "source" directory. 
 
